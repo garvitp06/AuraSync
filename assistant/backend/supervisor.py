@@ -61,7 +61,7 @@ class LangGraphSupervisorEngine:
 
     def watchdog_critic_node(self, state: AgentState) -> AgentState:
         """
-        The Adversarial Safety Gate. Mathematically vetoes or approves actions.
+        The Adversarial Safety Gate. Cross-checks safety metrics and forwards to local MCP execution.
         """
         print(f"[Node: Watchdog Critic] Cross-checking execution payload safety metrics...")
 
@@ -74,6 +74,18 @@ class LangGraphSupervisorEngine:
         state["is_approved"] = validation.is_safe
         if validation.is_safe:
             state["final_execution_plan"] = f"EXECUTE_MCP_CALL -> {state['current_intent']}"
+
+            # --- INTEGRATION WITH ALISHRI'S MCP SERVER ---
+            try:
+                # Import her file dynamically from the local backend directory
+                import mcp_server
+                # Pipe the command directly into her device execution handler
+                mcp_server.execute_mcp_tool(command=state["current_intent"], user=state["speaker_id"])
+            except ImportError:
+                print("   ↳ [MCP Notice] mcp_server.py module not found in staging path. Printing default route.")
+            except Exception as e:
+                print(f"   ↳ [MCP Execution Error] {e}")
+
         else:
             state[
                 "final_execution_plan"] = f"SAFETY_OVERRIDE -> {validation.corrected_action} (Reason: {validation.reason})"
