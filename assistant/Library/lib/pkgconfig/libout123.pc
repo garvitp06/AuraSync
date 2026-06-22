@@ -1,0 +1,12 @@
+prefix=E:/samsung-ennovatex-project/assistant/Library
+exec_prefix=E:/samsung-ennovatex-project/assistant/Library
+libdir=E:/samsung-ennovatex-project/assistant/Library/lib
+includedir=E:/samsung-ennovatex-project/assistant/Library/include
+
+Name: libout123
+Description: A streaming audio output API derived from mpg123
+Requires: 
+Version: 1.32.9
+Libs: -L${libdir} -lout123 
+Libs.private:  
+Cflags: -I${includedir} 

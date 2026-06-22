@@ -1,0 +1,8 @@
+libdir=E:/samsung-ennovatex-project/assistant/Library/lib
+includedir=E:/samsung-ennovatex-project/assistant/Library/include
+
+Name: BLAS
+Description: FORTRAN reference implementation of BLAS Basic Linear Algebra Subprograms
+Version: 3.9.0
+URL: http://www.netlib.org/blas/
+Libs: -L${libdir} -lblas

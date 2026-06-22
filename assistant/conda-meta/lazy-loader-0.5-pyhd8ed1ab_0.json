@@ -1,0 +1,114 @@
+{
+  "name": "lazy-loader",
+  "version": "0.5",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "lazy-loader-0.5-pyhd8ed1ab_0.conda",
+  "md5": "75932da6f03a6bef32b70a51e991f6eb",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/lazy-loader-0.5-pyhd8ed1ab_0.conda",
+  "sha256": "1a88069ac61d2756ccaf26a6c206ab4d56610fb054bd2fffb5df4cd0744ab78e",
+  "depends": [
+    "packaging",
+    "python >=3.10"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_python",
+  "timestamp": 1772817374026,
+  "size": 14883,
+  "_requested_specs": [],
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\lazy-loader-0.5-pyhd8ed1ab_0.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\lazy-loader-0.5-pyhd8ed1ab_0",
+  "files": [
+    "Lib/site-packages/lazy_loader-0.5.dist-info/INSTALLER",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/METADATA",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/RECORD",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/REQUESTED",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/WHEEL",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/direct_url.json",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/licenses/LICENSE.md",
+    "Lib/site-packages/lazy_loader-0.5.dist-info/top_level.txt",
+    "Lib/site-packages/lazy_loader/__init__.py",
+    "Lib/site-packages/lazy_loader/__pycache__/__init__.cpython-310.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "ab65c86264937d8ac080d5fc895db927ff2f964a07cb92f91768db155fc0c37c",
+        "size_in_bytes": 5919,
+        "sha256_in_prefix": "ab65c86264937d8ac080d5fc895db927ff2f964a07cb92f91768db155fc0c37c"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "e75e569aaf5de86e9ee99a4531e20e4487f0e90e14d3f86fdd3af227e95f1a57",
+        "size_in_bytes": 825,
+        "sha256_in_prefix": "e75e569aaf5de86e9ee99a4531e20e4487f0e90e14d3f86fdd3af227e95f1a57"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "6027f0606398322e49870d9f538c8d83012bc9b6f6217e4f13004a57865b741a",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "6027f0606398322e49870d9f538c8d83012bc9b6f6217e4f13004a57865b741a"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "160916e07241523aadeb8bcd706d9a35b29b2bab1670d1233580e165c36548ec",
+        "size_in_bytes": 107,
+        "sha256_in_prefix": "160916e07241523aadeb8bcd706d9a35b29b2bab1670d1233580e165c36548ec"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/licenses/LICENSE.md",
+        "path_type": "hardlink",
+        "sha256": "797b6937a4f976836efbbbb3ae333d7866ddc3eb3cb152972b2be348d3529372",
+        "size_in_bytes": 1539,
+        "sha256_in_prefix": "797b6937a4f976836efbbbb3ae333d7866ddc3eb3cb152972b2be348d3529372"
+      },
+      {
+        "_path": "site-packages/lazy_loader-0.5.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "358547f679febfec3e1406eb828acd44cf20fc6a1ec0d6f30bfd6da6da264134",
+        "size_in_bytes": 12,
+        "sha256_in_prefix": "358547f679febfec3e1406eb828acd44cf20fc6a1ec0d6f30bfd6da6da264134"
+      },
+      {
+        "_path": "site-packages/lazy_loader/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9017e7e780ffe7742b8cd25882c22c93acb9ac353f3372b8dcc76acf832acf29",
+        "size_in_bytes": 10801,
+        "sha256_in_prefix": "9017e7e780ffe7742b8cd25882c22c93acb9ac353f3372b8dcc76acf832acf29"
+      },
+      {
+        "_path": "Lib/site-packages/lazy_loader/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 10487
+      }
+    ]
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\lazy-loader-0.5-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

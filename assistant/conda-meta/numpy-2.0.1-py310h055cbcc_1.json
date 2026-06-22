@@ -1,0 +1,39 @@
+{
+  "name": "numpy",
+  "version": "2.0.1",
+  "build": "py310h055cbcc_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "subdir": "win-64",
+  "fn": "numpy-2.0.1-py310h055cbcc_1.conda",
+  "md5": "1d81dfd234ec182a908f207eee0cd068",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/numpy-2.0.1-py310h055cbcc_1.conda",
+  "sha256": "d49579871e4cdfb5894f81bc4efc6a3470753aa2bbd4ad55060fdf4bf7a6f2c4",
+  "depends": [
+    "blas 1.0 mkl",
+    "mkl >=2023.1.0,<2024.0a0",
+    "mkl-service >=2.3.0,<3.0a0",
+    "mkl_fft",
+    "mkl_random",
+    "numpy-base 2.0.1 py310h65a83cf_1",
+    "python >=3.10,<3.11.0a0",
+    "vc >=14.2,<15.0a0",
+    "vs2015_runtime >=14.29.30133,<15.0a0"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "timestamp": 1725472720000,
+  "size": 11671,
+  "_requested_specs": [],
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\numpy-2.0.1-py310h055cbcc_1.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\numpy-2.0.1-py310h055cbcc_1",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\numpy-2.0.1-py310h055cbcc_1",
+    "type": 1
+  }
+}

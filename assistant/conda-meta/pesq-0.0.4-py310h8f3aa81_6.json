@@ -1,0 +1,217 @@
+{
+  "name": "pesq",
+  "version": "0.0.4",
+  "build": "py310h8f3aa81_6",
+  "build_number": 6,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "subdir": "win-64",
+  "fn": "pesq-0.0.4-py310h8f3aa81_6.conda",
+  "md5": "dc5a84d0527f47c10c2668d885dbe0bd",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/pesq-0.0.4-py310h8f3aa81_6.conda",
+  "sha256": "e9f9faa1395e073d5b655de20eb00640a387a7d10ccc9d72e37200ffa9020483",
+  "depends": [
+    "numpy >=1.21,<3",
+    "python >=3.10,<3.11.0a0",
+    "python_abi 3.10.* *_cp310",
+    "ucrt >=10.0.20348.0",
+    "vc >=14.3,<15",
+    "vc14_runtime >=14.44.35208"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "timestamp": 1761572528300,
+  "size": 104464,
+  "requested_spec": "pesq",
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\pesq-0.0.4-py310h8f3aa81_6.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\pesq-0.0.4-py310h8f3aa81_6",
+  "files": [
+    "Lib/site-packages/pesq-0.0.4.dist-info/INSTALLER",
+    "Lib/site-packages/pesq-0.0.4.dist-info/METADATA",
+    "Lib/site-packages/pesq-0.0.4.dist-info/RECORD",
+    "Lib/site-packages/pesq-0.0.4.dist-info/REQUESTED",
+    "Lib/site-packages/pesq-0.0.4.dist-info/WHEEL",
+    "Lib/site-packages/pesq-0.0.4.dist-info/direct_url.json",
+    "Lib/site-packages/pesq-0.0.4.dist-info/licenses/LICENSE",
+    "Lib/site-packages/pesq-0.0.4.dist-info/top_level.txt",
+    "Lib/site-packages/pesq/__init__.py",
+    "Lib/site-packages/pesq/__pycache__/__init__.cpython-310.pyc",
+    "Lib/site-packages/pesq/__pycache__/_pesq.cpython-310.pyc",
+    "Lib/site-packages/pesq/_pesq.py",
+    "Lib/site-packages/pesq/cypesq.cp310-win_amd64.pyd",
+    "Lib/site-packages/pesq/cypesq.pyx",
+    "Lib/site-packages/pesq/dsp.c",
+    "Lib/site-packages/pesq/dsp.h",
+    "Lib/site-packages/pesq/pesq.h",
+    "Lib/site-packages/pesq/pesqdsp.c",
+    "Lib/site-packages/pesq/pesqio.h",
+    "Lib/site-packages/pesq/pesqmain.h",
+    "Lib/site-packages/pesq/pesqmod.c",
+    "Lib/site-packages/pesq/pesqpar.h"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "d90ec059b155f545f0d489526cd931507e2f461e4e268f47cac3eecb5d3f1311",
+        "size_in_bytes": 5565,
+        "sha256_in_prefix": "d90ec059b155f545f0d489526cd931507e2f461e4e268f47cac3eecb5d3f1311"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f17cb5e57f651e4a303f410f279743c3cee5d2c555448ab20108849f1b1441b0",
+        "size_in_bytes": 1615,
+        "sha256_in_prefix": "f17cb5e57f651e4a303f410f279743c3cee5d2c555448ab20108849f1b1441b0"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "294b810ba97101b1c22a294ab9af11f56fd333bd7ffbd4a0e6e10fdee0d67285",
+        "size_in_bytes": 101,
+        "sha256_in_prefix": "294b810ba97101b1c22a294ab9af11f56fd333bd7ffbd4a0e6e10fdee0d67285"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "89ad05f2725ee952e79187c407a3012be6b9a0bf19adad319e4977a45ddc8e48",
+        "size_in_bytes": 65,
+        "sha256_in_prefix": "89ad05f2725ee952e79187c407a3012be6b9a0bf19adad319e4977a45ddc8e48"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "bbdea200babee5a84940afb0430e90ef9b93fb1ec5532270bc7dc96f1fe985a5",
+        "size_in_bytes": 1085,
+        "sha256_in_prefix": "bbdea200babee5a84940afb0430e90ef9b93fb1ec5532270bc7dc96f1fe985a5"
+      },
+      {
+        "_path": "Lib/site-packages/pesq-0.0.4.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "33669416d79f72ef647054105de41be84d493f59d08ee71d6349a6982c9a7199",
+        "size_in_bytes": 12,
+        "sha256_in_prefix": "33669416d79f72ef647054105de41be84d493f59d08ee71d6349a6982c9a7199"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c3c306e49ed72dc9369b182e0b7b415c2609a5d54e69d81ea9d0b728626b0cde",
+        "size_in_bytes": 393,
+        "sha256_in_prefix": "c3c306e49ed72dc9369b182e0b7b415c2609a5d54e69d81ea9d0b728626b0cde"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/__pycache__/__init__.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "677712a786b1616f3175225f3063f0014cc44c3e299c48409a856c8ac9238257",
+        "size_in_bytes": 388,
+        "sha256_in_prefix": "677712a786b1616f3175225f3063f0014cc44c3e299c48409a856c8ac9238257"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/__pycache__/_pesq.cpython-310.pyc",
+        "path_type": "hardlink",
+        "sha256": "3b22d9f48e1e9bdd3bc34140e4e55d5e3f4a2b9fb576e740acf677ed3445b566",
+        "size_in_bytes": 5671,
+        "sha256_in_prefix": "3b22d9f48e1e9bdd3bc34140e4e55d5e3f4a2b9fb576e740acf677ed3445b566"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/_pesq.py",
+        "path_type": "hardlink",
+        "sha256": "362071df81152feaa6bc66e0f3a89b52fb06580e0510815492ee210b0f0263c2",
+        "size_in_bytes": 6307,
+        "sha256_in_prefix": "362071df81152feaa6bc66e0f3a89b52fb06580e0510815492ee210b0f0263c2"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/cypesq.cp310-win_amd64.pyd",
+        "path_type": "hardlink",
+        "sha256": "85d197c2035ab45d07046efb90cf41d1baa638350e3e55dd9a3ab8c9ea7728a2",
+        "size_in_bytes": 142848,
+        "sha256_in_prefix": "85d197c2035ab45d07046efb90cf41d1baa638350e3e55dd9a3ab8c9ea7728a2"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/cypesq.pyx",
+        "path_type": "hardlink",
+        "sha256": "4756c7e868dfae72177f796ae8c1ceb2503c70cec5f65933badb279096c7bfa5",
+        "size_in_bytes": 5426,
+        "sha256_in_prefix": "4756c7e868dfae72177f796ae8c1ceb2503c70cec5f65933badb279096c7bfa5"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/dsp.c",
+        "path_type": "hardlink",
+        "sha256": "263f5ee44c9406cc6931d3236016ef51230672b04344b7020b230c469031d742",
+        "size_in_bytes": 15388,
+        "sha256_in_prefix": "263f5ee44c9406cc6931d3236016ef51230672b04344b7020b230c469031d742"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/dsp.h",
+        "path_type": "hardlink",
+        "sha256": "c8205fadbeb46f7931fda9cf45ecd57cbcb8f2b76a5b866b190b4c6d6dafbf60",
+        "size_in_bytes": 5612,
+        "sha256_in_prefix": "c8205fadbeb46f7931fda9cf45ecd57cbcb8f2b76a5b866b190b4c6d6dafbf60"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesq.h",
+        "path_type": "hardlink",
+        "sha256": "a9884b11d3b977963a0542d1c1f5427aa075b08376d106a43ba19e3dab33c58b",
+        "size_in_bytes": 10766,
+        "sha256_in_prefix": "a9884b11d3b977963a0542d1c1f5427aa075b08376d106a43ba19e3dab33c58b"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesqdsp.c",
+        "path_type": "hardlink",
+        "sha256": "95c73b862f8896a43173b2fbd07a948a090a59427b1b06605672c516ba6b09ed",
+        "size_in_bytes": 34037,
+        "sha256_in_prefix": "95c73b862f8896a43173b2fbd07a948a090a59427b1b06605672c516ba6b09ed"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesqio.h",
+        "path_type": "hardlink",
+        "sha256": "65c32ddceb0934377926123356074d996f0925e6b7714ccd6b654eb44be7769a",
+        "size_in_bytes": 13586,
+        "sha256_in_prefix": "65c32ddceb0934377926123356074d996f0925e6b7714ccd6b654eb44be7769a"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesqmain.h",
+        "path_type": "hardlink",
+        "sha256": "559094deaa267ae6becd471a59f3810281af80ef9da3d4a17b3afea3de161e23",
+        "size_in_bytes": 19051,
+        "sha256_in_prefix": "559094deaa267ae6becd471a59f3810281af80ef9da3d4a17b3afea3de161e23"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesqmod.c",
+        "path_type": "hardlink",
+        "sha256": "e760c30214082ee30d19151f50cd5bd90a82affd4bdfb1a62d10b6119d41b685",
+        "size_in_bytes": 53375,
+        "sha256_in_prefix": "e760c30214082ee30d19151f50cd5bd90a82affd4bdfb1a62d10b6119d41b685"
+      },
+      {
+        "_path": "Lib/site-packages/pesq/pesqpar.h",
+        "path_type": "hardlink",
+        "sha256": "cfa8ae4b5dc00d4b3f50f7a453a06152d95b810113b1dcca01f85eb30a6f61f5",
+        "size_in_bytes": 21141,
+        "sha256_in_prefix": "cfa8ae4b5dc00d4b3f50f7a453a06152d95b810113b1dcca01f85eb30a6f61f5"
+      }
+    ]
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\pesq-0.0.4-py310h8f3aa81_6",
+    "type": 1
+  },
+  "requested_specs": [
+    "pesq"
+  ]
+}

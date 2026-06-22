@@ -1,0 +1,14 @@
+prefix=E:/samsung-ennovatex-project/assistant/Library
+exec_prefix=${prefix}
+libdir=E:/samsung-ennovatex-project/assistant/Library/lib
+includedir=E:/samsung-ennovatex-project/assistant/Library/include
+
+Name: libavformat
+Description: FFmpeg container format library
+Version: 61.7.100
+Requires: 
+Requires.private: libavcodec >= 61.19.100, libswresample >= 5.3.100, libavutil >= 59.39.100
+Conflicts:
+Libs: -L${libdir}  -lavformat 
+Libs.private: -LE:/samsung-ennovatex-project/assistant/Library/lib xml2.lib iconv.lib zlib.lib bz2.lib -LE:/samsung-ennovatex-project/assistant/Library/lib zlib.lib -LE:/samsung-ennovatex-project/assistant/Library/lib libssl.lib libcrypto.lib crypt32.lib ws2_32.lib ws2_32.lib
+Cflags: -I${includedir}

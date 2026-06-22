@@ -1,0 +1,11 @@
+prefix=E:/samsung-ennovatex-project/assistant/Library
+exec_prefix=E:/samsung-ennovatex-project/assistant/Library
+libdir=E:/samsung-ennovatex-project/assistant/Library/lib
+includedir=E:/samsung-ennovatex-project/assistant/Library/include
+
+Name: FLAC++
+Description: Free Lossless Audio Codec Library (C++ API)
+Version: 1.5.0
+Requires: flac
+Libs: -L${libdir} -lFLAC++
+Cflags: -I${includedir}

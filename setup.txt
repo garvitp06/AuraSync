@@ -1,0 +1,5 @@
+Open your terminal. Type the commands to create a virtual environment and
+install dependencies.
+    python -m venv venv
+    venv\Scripts\activate (or source venv/bin/activate on Mac/Linux)
+    pip install -r requirements.txt

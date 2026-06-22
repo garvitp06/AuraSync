@@ -1,0 +1,34 @@
+{
+  "name": "lazy_loader",
+  "version": "0.5",
+  "build": "pyhd8ed1ab_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/noarch",
+  "subdir": "noarch",
+  "fn": "lazy_loader-0.5-pyhd8ed1ab_0.conda",
+  "md5": "4c8327180586e7b1cd8b6815fc8827f1",
+  "url": "https://conda.anaconda.org/conda-forge/noarch/lazy_loader-0.5-pyhd8ed1ab_0.conda",
+  "sha256": "42adb08ded0662114a3146627b24d2cd5eba3bfc3ed424374bac869cdc1745a9",
+  "depends": [
+    "lazy-loader 0.5 pyhd8ed1ab_0",
+    "python >=3.10"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_python",
+  "timestamp": 1772817387506,
+  "size": 7565,
+  "_requested_specs": [],
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\lazy_loader-0.5-pyhd8ed1ab_0.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\lazy_loader-0.5-pyhd8ed1ab_0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\lazy_loader-0.5-pyhd8ed1ab_0",
+    "type": 1
+  }
+}

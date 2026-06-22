@@ -1,0 +1,191 @@
+{
+  "name": "soxr",
+  "version": "0.1.3",
+  "build": "hcfcfb64_3",
+  "build_number": 3,
+  "channel": "https://conda.anaconda.org/conda-forge/win-64",
+  "subdir": "win-64",
+  "fn": "soxr-0.1.3-hcfcfb64_3.conda",
+  "md5": "8112bd0d3eb530551b2adebda0ea4c0c",
+  "url": "https://conda.anaconda.org/conda-forge/win-64/soxr-0.1.3-hcfcfb64_3.conda",
+  "sha256": "167201931c6be6355fa79e22fe5b8993f67a2efd0fc94acbb15393918d9a7578",
+  "depends": [
+    "ucrt >=10.0.20348.0",
+    "vc >=14.2,<15",
+    "vs2015_runtime >=14.29.30139"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-or-later",
+  "timestamp": 1674059996047,
+  "size": 112328,
+  "_requested_specs": [],
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\soxr-0.1.3-hcfcfb64_3.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\soxr-0.1.3-hcfcfb64_3",
+  "files": [
+    "Library/bin/soxr-lsr.dll",
+    "Library/bin/soxr.dll",
+    "Library/doc/LICENCE",
+    "Library/doc/NEWS",
+    "Library/doc/README",
+    "Library/doc/examples/1-single-block.c",
+    "Library/doc/examples/1a-lsr.c",
+    "Library/doc/examples/2-stream.C",
+    "Library/doc/examples/3-options-input-fn.c",
+    "Library/doc/examples/4-split-channels.c",
+    "Library/doc/examples/5-variable-rate.c",
+    "Library/doc/examples/README",
+    "Library/doc/examples/examples-common.h",
+    "Library/include/soxr-lsr.h",
+    "Library/include/soxr.h",
+    "Library/lib/pkgconfig/soxr-lsr.pc",
+    "Library/lib/pkgconfig/soxr.pc",
+    "Library/lib/soxr-lsr.lib",
+    "Library/lib/soxr.lib"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "Library/bin/soxr-lsr.dll",
+        "path_type": "hardlink",
+        "sha256": "022f943ce77dc1710d023ce2984b0a282e7eff6c8157a841bc8fa5d82035ee6b",
+        "size_in_bytes": 13312,
+        "sha256_in_prefix": "022f943ce77dc1710d023ce2984b0a282e7eff6c8157a841bc8fa5d82035ee6b"
+      },
+      {
+        "_path": "Library/bin/soxr.dll",
+        "path_type": "hardlink",
+        "sha256": "c8e1c316741f6aa85512604fd616e559ac993571a829f4b864084fed84528761",
+        "size_in_bytes": 211456,
+        "sha256_in_prefix": "c8e1c316741f6aa85512604fd616e559ac993571a829f4b864084fed84528761"
+      },
+      {
+        "_path": "Library/doc/LICENCE",
+        "path_type": "hardlink",
+        "sha256": "dc98676341fdcd29d9f279c9679d6a75288785b174ded8d1b2e316c366166135",
+        "size_in_bytes": 1024,
+        "sha256_in_prefix": "dc98676341fdcd29d9f279c9679d6a75288785b174ded8d1b2e316c366166135"
+      },
+      {
+        "_path": "Library/doc/NEWS",
+        "path_type": "hardlink",
+        "sha256": "490966b220ad4b335057c5c92ecc47380c346709b08f942354df085d05163211",
+        "size_in_bytes": 2410,
+        "sha256_in_prefix": "490966b220ad4b335057c5c92ecc47380c346709b08f942354df085d05163211"
+      },
+      {
+        "_path": "Library/doc/README",
+        "path_type": "hardlink",
+        "sha256": "c3d94aa8237daeb4e6bd5b6555b72bf5cf1fbe9319f5980fd5362cdc5982f90e",
+        "size_in_bytes": 2866,
+        "sha256_in_prefix": "c3d94aa8237daeb4e6bd5b6555b72bf5cf1fbe9319f5980fd5362cdc5982f90e"
+      },
+      {
+        "_path": "Library/doc/examples/1-single-block.c",
+        "path_type": "hardlink",
+        "sha256": "52cf2603fb5b03964b716ef93c390c281c6a440b39cb809cf5eadd8f2cee883b",
+        "size_in_bytes": 2104,
+        "sha256_in_prefix": "52cf2603fb5b03964b716ef93c390c281c6a440b39cb809cf5eadd8f2cee883b"
+      },
+      {
+        "_path": "Library/doc/examples/1a-lsr.c",
+        "path_type": "hardlink",
+        "sha256": "6384ffc5270f79069322182a309a61e1d315807f87a94329fe6038bd975c789f",
+        "size_in_bytes": 1559,
+        "sha256_in_prefix": "6384ffc5270f79069322182a309a61e1d315807f87a94329fe6038bd975c789f"
+      },
+      {
+        "_path": "Library/doc/examples/2-stream.C",
+        "path_type": "hardlink",
+        "sha256": "4f410223670634364778ad4162a2f0082a275436d8653af2994c846bdd0ad7e7",
+        "size_in_bytes": 3109,
+        "sha256_in_prefix": "4f410223670634364778ad4162a2f0082a275436d8653af2994c846bdd0ad7e7"
+      },
+      {
+        "_path": "Library/doc/examples/3-options-input-fn.c",
+        "path_type": "hardlink",
+        "sha256": "4679ae5ef51d0e02323774a479e2f86278f7e38f94f4c553f3bcae17cc613159",
+        "size_in_bytes": 5139,
+        "sha256_in_prefix": "4679ae5ef51d0e02323774a479e2f86278f7e38f94f4c553f3bcae17cc613159"
+      },
+      {
+        "_path": "Library/doc/examples/4-split-channels.c",
+        "path_type": "hardlink",
+        "sha256": "61f24f8cde674ba39e70c4ccb3f2e26639c8d077f579821303478116341d683b",
+        "size_in_bytes": 5953,
+        "sha256_in_prefix": "61f24f8cde674ba39e70c4ccb3f2e26639c8d077f579821303478116341d683b"
+      },
+      {
+        "_path": "Library/doc/examples/5-variable-rate.c",
+        "path_type": "hardlink",
+        "sha256": "5c5759a3118442e8acf75933360f65c9d817cd5cb80a95992b0b07ab1dc2b740",
+        "size_in_bytes": 3834,
+        "sha256_in_prefix": "5c5759a3118442e8acf75933360f65c9d817cd5cb80a95992b0b07ab1dc2b740"
+      },
+      {
+        "_path": "Library/doc/examples/README",
+        "path_type": "hardlink",
+        "sha256": "8d1ff793183fb5cdc4dd96b2ef98bd83b71406fda0c1d2a97f6de5e77d3c06b4",
+        "size_in_bytes": 841,
+        "sha256_in_prefix": "8d1ff793183fb5cdc4dd96b2ef98bd83b71406fda0c1d2a97f6de5e77d3c06b4"
+      },
+      {
+        "_path": "Library/doc/examples/examples-common.h",
+        "path_type": "hardlink",
+        "sha256": "b119bbf8790cf195a2aff4b4045853e6892248a3a19d7ac099fa077d9b52a85e",
+        "size_in_bytes": 1143,
+        "sha256_in_prefix": "b119bbf8790cf195a2aff4b4045853e6892248a3a19d7ac099fa077d9b52a85e"
+      },
+      {
+        "_path": "Library/include/soxr-lsr.h",
+        "path_type": "hardlink",
+        "sha256": "d93e2f3055c584dab454ef99bf3f0dace537a8ae3a2b57a6a113fe43f8e74d6a",
+        "size_in_bytes": 3112,
+        "sha256_in_prefix": "d93e2f3055c584dab454ef99bf3f0dace537a8ae3a2b57a6a113fe43f8e74d6a"
+      },
+      {
+        "_path": "Library/include/soxr.h",
+        "path_type": "hardlink",
+        "sha256": "dfd18fae32b77b484bda918dbaac122ddd402512041a96977fc01377f69684a4",
+        "size_in_bytes": 13984,
+        "sha256_in_prefix": "dfd18fae32b77b484bda918dbaac122ddd402512041a96977fc01377f69684a4"
+      },
+      {
+        "_path": "Library/lib/pkgconfig/soxr-lsr.pc",
+        "prefix_placeholder": "D:/bld/soxr_1674059673366/_h_env",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "b59738c32f6d900a50380c17f7a2d866c354f58910b4722afc65bbed8dfc524d",
+        "size_in_bytes": 267,
+        "sha256_in_prefix": "e1bd73f42d85db5cd18ffe4b8b416ccf604efb8a2e13eabc6e1924a719e0d438"
+      },
+      {
+        "_path": "Library/lib/pkgconfig/soxr.pc",
+        "prefix_placeholder": "D:/bld/soxr_1674059673366/_h_env",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "bd0ddb3c7d02ecf886d450ea570c2b3252a1583051c6023aa3d450d3db5aeaf9",
+        "size_in_bytes": 224,
+        "sha256_in_prefix": "b9ac9ac9091b3e6b1590fe73dd796ea3e89de6df39bdc882065b43848ab36c93"
+      },
+      {
+        "_path": "Library/lib/soxr-lsr.lib",
+        "path_type": "hardlink",
+        "sha256": "cef0f9dba8d58efffbeb9739a0f5802f063dc4d8c178e1e56aea3d7f5c77ccfb",
+        "size_in_bytes": 5174,
+        "sha256_in_prefix": "cef0f9dba8d58efffbeb9739a0f5802f063dc4d8c178e1e56aea3d7f5c77ccfb"
+      },
+      {
+        "_path": "Library/lib/soxr.lib",
+        "path_type": "hardlink",
+        "sha256": "e30078ed782fccefef6afc291a764eed97aea66e48d2e4970be6eac70021f8ea",
+        "size_in_bytes": 4904,
+        "sha256_in_prefix": "e30078ed782fccefef6afc291a764eed97aea66e48d2e4970be6eac70021f8ea"
+      }
+    ]
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\soxr-0.1.3-hcfcfb64_3",
+    "type": 1
+  }
+}

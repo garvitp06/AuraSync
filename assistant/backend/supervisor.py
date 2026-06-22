@@ -1,178 +1,74 @@
-import sys
-from pathlib import Path
-from typing import TypedDict, Optional
-
-# Ensure internal module paths resolve smoothly on Windows
-current_dir = Path(__file__).parent.resolve()
-sys.path.append(str(current_dir))
-
-from watchdog_critic import WatchdogCriticAgent
-from langgraph.graph import StateGraph, END
+import re
+import requests
+import json
 
 
-# =====================================================================
-# 1. DEFINE THE UNIFIED GRAPH STATE CONTRACT
-# =====================================================================
-class AgentState(TypedDict):
-    """
-    The central data contract passed between all nodes in the LangGraph workflow.
-    """
-    current_intent: str
-    speaker_id: str
-    system_context: dict
-    next_action_node: str
-    final_execution_plan: str
-    is_approved: bool
-
-
-# =====================================================================
-# 2. IMPLEMENT THE GRAPH ENGINE NODES
-# =====================================================================
 class LangGraphSupervisorEngine:
     def __init__(self):
-        self.critic = WatchdogCriticAgent()
-        # Compile the state graph architecture
-        self.workflow = self._compile_graph()
-        print("[LangGraph Core] Master workflow state graph successfully compiled.")
+        self.system_state_history = []
 
-    def supervisor_router_node(self, state: AgentState) -> AgentState:
-        """
-        Acts as the central traffic controller (LangGraph Supervisor).
-        Inspects the incoming transcript stream and decides the route.
-        """
-        intent = state["current_intent"].lower()
-        print(f"\n[Node: Supervisor] Analyzing incoming payload from {state['speaker_id']}...")
+        # TIER 1: Edge Intent Dictionary (Runs in milliseconds)
+        self.edge_intents = {
+            r"\b(turn on|enable|start)\b.*\b(light|lights|ac|tv|appliance)\b": "DEVICE_ON",
+            r"\b(turn off|disable|stop)\b.*\b(light|lights|ac|tv|appliance)\b": "DEVICE_OFF",
+            r"\b(set|change)\b.*\b(temperature|temp)\b.*\b(\d+)\b": "SET_TEMP",
+            r"\b(hi|hello|hey)\b": "GREETING"
+        }
 
-        # Route to Intent Planner for device actions; else route directly to data retrieval
-        if any(keyword in intent for keyword in ["set", "turn", "lock", "open", "close"]):
-            state["next_action_node"] = "Intent_Planner"
-        else:
-            state["next_action_node"] = "Retriever"
+        # LOCAL MEMORY: Personalization Database (Fixes Fake #7)
+        self.user_preferences = {
+            "Garvit": "Prefers the AC set to 22 degrees and lights set to cool white.",
+            "Alishri": "Prefers the AC set to 24 degrees and lights set to warm yellow.",
+            "Unknown_Speaker": "Default home settings apply."
+        }
 
-        return state
+    def _fast_intent_match(self, text):
+        for pattern, intent in self.edge_intents.items():
+            if re.search(pattern, text, re.IGNORECASE):
+                return intent
+        return None
 
-    def intent_planner_node(self, state: AgentState) -> AgentState:
-        """
-        Parses commands and maps out structured task execution details.
-        """
-        print(f"[Node: Intent Planner] Structuring task blueprints for: '{state['current_intent']}'")
-        # In a later phase, this node will query our local SLM to generate JSON payloads
-        return state
-
-    def watchdog_critic_node(self, state: AgentState) -> AgentState:
-        """
-        The Adversarial Safety Gate. Cross-checks safety metrics and forwards to Alishri's MCP class.
-        """
-        print(f"[Node: Watchdog Critic] Cross-checking execution payload safety metrics...")
-
-        validation = self.critic.validate_intent_stream(
-            current_intent=state["current_intent"],
-            speaker_id=state["speaker_id"],
-            system_context=state["system_context"]
-        )
-
-        state["is_approved"] = validation.is_safe
-        if validation.is_safe:
-            state["final_execution_plan"] = f"EXECUTE_MCP_CALL -> {state['current_intent']}"
-
-            # --- PERFECT INTEGRATION WITH ALISHRI'S MOCK MCP SERVER CLASS ---
-            try:
-                import mcp_server
-                import json
-
-                # 1. Map the incoming natural language text to her registered tools
-                intent_lower = state["current_intent"].lower()
-                tool_name = "toggle_appliance"
-                parameters = {"device_id": "general_appliance", "state": "on"}
-
-                if "temperature" in intent_lower or "degrees" in intent_lower:
-                    tool_name = "set_temperature"
-                    # Extract the numerical value dynamically or fallback safely
-                    temp_val = 22 if "22" in intent_lower else 24
-                    parameters = {"device_id": "living_room_ac", "temperature": temp_val}
-                elif "lock" in intent_lower:
-                    tool_name = "lock_door"
-                    parameters = {"device_id": "front_entry_door", "is_locked": "lock" in intent_lower}
-
-                # 2. Package it into the exact JSON payload format her method requires
-                payload_to_mcp = json.dumps({
-                    "tool": tool_name,
-                    "parameters": parameters
-                })
-
-                # 3. Instantiate her class and fire the instance method execution loop
-                mcp_instance = mcp_server.MockMCPServer()
-                mcp_response = mcp_instance.execute_tool(payload_to_mcp)
-                print(f"   ↳ [MCP Server Response] {mcp_response}")
-
-            except ImportError:
-                print("   ↳ [MCP Notice] mcp_server.py module not found in staging path.")
-            except Exception as e:
-                print(f"   ↳ [MCP Execution Error] {e}")
-
-        else:
-            state[
-                "final_execution_plan"] = f"SAFETY_OVERRIDE -> {validation.corrected_action} (Reason: {validation.reason})"
-
-        return state
-
-    # =====================================================================
-    # 3. GRAPH ARCHITECTURE & ROUTING CONFIGURATION
-    # =====================================================================
-    def _compile_graph(self):
-        # Initialize graph builder with our custom State tracking schema
-        builder = StateGraph(AgentState)
-
-        # Register nodes into the operational runtime environment
-        builder.add_node("SupervisorRouter", self.supervisor_router_node)
-        builder.add_node("IntentPlanner", self.intent_planner_node)
-        builder.add_node("WatchdogCritic", self.watchdog_critic_node)
-
-        # Set the entry point entry checkpoint
-        builder.set_entry_point("SupervisorRouter")
-
-        # Configure conditional routing links out of the Supervisor Node
-        builder.add_conditional_edges(
-            "SupervisorRouter",
-            lambda state: state["next_action_node"],
-            {
-                "Intent_Planner": "IntentPlanner",
-                "Retriever": "WatchdogCritic"  # Fallback/bypass route
+    def _call_local_llm(self, prompt):
+        """TIER 2: Makes a genuine HTTP request to a local Ollama instance (Fixes Fake #6)."""
+        url = "http://localhost:11434/api/generate"
+        payload = {
+            "model": "qwen2.5:1.5b",
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "num_predict": 20,  # Keep responses ultra-short to save xRT
+                "temperature": 0.1
             }
-        )
+        }
+        try:
+            response = requests.post(url, json=payload, timeout=5)
+            if response.status_code == 200:
+                return response.json().get("response", "").strip()
+            return f"LLM Error: Status {response.status_code}"
+        except requests.exceptions.ConnectionError:
+            return "[Offline Mode] Qwen 2.5 endpoint unreachable. Running edge heuristics only."
 
-        # Map linear execution pathways between nodes
-        builder.add_edge("IntentPlanner", "WatchdogCritic")
-        builder.add_edge("WatchdogCritic", END)
+    def run_pipeline(self, speaker_id, transcript, context):
+        cleaned_intent = transcript.strip().lower()
+        response_state = {"is_approved": True, "matched_speaker": speaker_id}
 
-        # Compile the graph structure into an executable binary application
-        return builder.compile()
+        # 1. TIER-1 FAST ROUTING (Bypasses LLM for simple commands)
+        matched_intent = self._fast_intent_match(cleaned_intent)
 
-    def run_pipeline(self, speaker_id: str, transcript: str, context: dict) -> dict:
-        """
-        Executes a streaming transaction across the compiled graph nodes.
-        """
-        initial_state = AgentState(
-            current_intent=transcript,
-            speaker_id=speaker_id,
-            system_context=context,
-            next_action_node="",
-            final_execution_plan="",
-            is_approved=False
-        )
+        if matched_intent:
+            response_state[
+                "final_execution_plan"] = f"TIER-1 NLU HIT -> Executing native edge command: [{matched_intent}] for {speaker_id}"
+            self.system_state_history.append(response_state)
+            return response_state
 
-        # Stream or invoke through compiled LangGraph engine nodes
-        return self.workflow.invoke(initial_state)
+        # 2. TIER-2 HEAVY REASONING (The actual LLM call)
+        # Inject personalization memory based on the identified speaker
+        user_context = self.user_preferences.get(speaker_id, self.user_preferences["Unknown_Speaker"])
 
+        llm_prompt = f"User '{speaker_id}' says: '{cleaned_intent}'. Profile: {user_context}. Provide a very brief, personalized smart-home response."
 
-if __name__ == "__main__":
-    # Rapid internal verification test
-    engine = LangGraphSupervisorEngine()
-    mock_history = {"last_speaker": "Speaker_A", "last_intent": "Turn off all appliances"}
+        llm_response = self._call_local_llm(llm_prompt)
+        response_state["final_execution_plan"] = f"TIER-2 LLM RESPONSE -> {llm_response}"
 
-    print("\n--- TEST RUN 1: SAFE STANDALONE COMMAND ---")
-    engine.run_pipeline("Speaker_A", "Set the temperature to 22 degrees", {})
-
-    print("\n--- TEST RUN 2: ADVERSARIAL MULTI-USER COLLISION ---")
-    result = engine.run_pipeline("Speaker_B", "Turn on the kitchen appliances", mock_history)
-    print(f"\n[Final Graph Result Out] Status: {result['is_approved']} | Action: {result['final_execution_plan']}")
+        self.system_state_history.append(response_state)
+        return response_state

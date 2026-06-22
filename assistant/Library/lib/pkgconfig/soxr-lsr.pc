@@ -1,0 +1,5 @@
+Name: soxr-lsr
+Description: High quality, one-dimensional sample-rate conversion library (with libsamplerate-like bindings)
+Version: 0.1.3
+Libs: -LE:/samsung-ennovatex-project/assistant/Library/lib -lsoxr-lsr
+Cflags: -IE:/samsung-ennovatex-project/assistant/Library/include

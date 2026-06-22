@@ -1,0 +1,14 @@
+prefix=E:/samsung-ennovatex-project/assistant/Library
+exec_prefix=${prefix}
+libdir=E:/samsung-ennovatex-project/assistant/Library/lib
+includedir=E:/samsung-ennovatex-project/assistant/Library/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 59.39.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -LE:/samsung-ennovatex-project/assistant/Library/lib libssl.lib libcrypto.lib crypt32.lib ws2_32.lib user32.lib bcrypt.lib
+Cflags: -I${includedir}

@@ -1,0 +1,141 @@
+{
+  "name": "mpfr",
+  "version": "4.2.1",
+  "build": "h56c3642_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/win-64",
+  "subdir": "win-64",
+  "fn": "mpfr-4.2.1-h56c3642_0.conda",
+  "md5": "c0c4bf9580e732efa25db624466c1fa9",
+  "url": "https://repo.anaconda.com/pkgs/main/win-64/mpfr-4.2.1-h56c3642_0.conda",
+  "sha256": "84dcaa291edcf5738807c40def8af252ab54361802fe198aca3ba2adad543d99",
+  "depends": [
+    "gmp >=6.3.0,<7.0a0",
+    "vc >=14.2,<15.0a0",
+    "vs2015_runtime >=14.29.30133,<15.0a0"
+  ],
+  "constrains": [],
+  "license": "LGPL-3.0-only",
+  "timestamp": 1738077478000,
+  "size": 272653,
+  "_requested_specs": [],
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\mpfr-4.2.1-h56c3642_0.conda",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\mpfr-4.2.1-h56c3642_0",
+  "files": [
+    "Library/bin/libmpfr-6.dll",
+    "Library/bin/libmpfr.dll",
+    "Library/bin/mpfr.dll",
+    "Library/include/mpfr.h",
+    "Library/lib/cmake/mpfr/MPFRConfig.cmake",
+    "Library/lib/cmake/mpfr/MPFRConfigVersion.cmake",
+    "Library/lib/cmake/mpfr/libmpfr-release.cmake",
+    "Library/lib/cmake/mpfr/libmpfr.cmake",
+    "Library/lib/libmpfr-6.lib",
+    "Library/lib/libmpfr.dll.a",
+    "Library/lib/libmpfr.lib",
+    "Library/lib/mpfr.lib",
+    "Library/lib/pkgconfig/mpfr.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "Library/bin/libmpfr-6.dll",
+        "path_type": "hardlink",
+        "sha256": "1b98652e7b06f51fe59cfb842260ed0991ddc9ca73d9181fe452ffe5d238f1d9",
+        "size_in_bytes": 421136,
+        "sha256_in_prefix": "1b98652e7b06f51fe59cfb842260ed0991ddc9ca73d9181fe452ffe5d238f1d9"
+      },
+      {
+        "_path": "Library/bin/libmpfr.dll",
+        "path_type": "hardlink",
+        "sha256": "be5b8ea01f3ac4444fa78af602babc9b82188ab713bd0d76e3689af6fd712c48",
+        "size_in_bytes": 421136,
+        "sha256_in_prefix": "be5b8ea01f3ac4444fa78af602babc9b82188ab713bd0d76e3689af6fd712c48"
+      },
+      {
+        "_path": "Library/bin/mpfr.dll",
+        "path_type": "hardlink",
+        "sha256": "0c26f3604862eb9c3d62c2f7f3480fc41c330d8e35050ffbfe18844fafb55a98",
+        "size_in_bytes": 421136,
+        "sha256_in_prefix": "0c26f3604862eb9c3d62c2f7f3480fc41c330d8e35050ffbfe18844fafb55a98"
+      },
+      {
+        "_path": "Library/include/mpfr.h",
+        "path_type": "hardlink",
+        "sha256": "0f1bf63d924c33f3f73d3fc68b049d9f01523a021f89fa4d8910e35122151e33",
+        "size_in_bytes": 57443,
+        "sha256_in_prefix": "0f1bf63d924c33f3f73d3fc68b049d9f01523a021f89fa4d8910e35122151e33"
+      },
+      {
+        "_path": "Library/lib/cmake/mpfr/MPFRConfig.cmake",
+        "path_type": "hardlink",
+        "sha256": "46be0144439605eb252658c2bc4ad6efa76161e4d727d41b297277448ff620b5",
+        "size_in_bytes": 85,
+        "sha256_in_prefix": "46be0144439605eb252658c2bc4ad6efa76161e4d727d41b297277448ff620b5"
+      },
+      {
+        "_path": "Library/lib/cmake/mpfr/MPFRConfigVersion.cmake",
+        "path_type": "hardlink",
+        "sha256": "9eaeb2da80f02020f4c69a21757f2f70d92bf1535c409653e285697672432372",
+        "size_in_bytes": 2809,
+        "sha256_in_prefix": "9eaeb2da80f02020f4c69a21757f2f70d92bf1535c409653e285697672432372"
+      },
+      {
+        "_path": "Library/lib/cmake/mpfr/libmpfr-release.cmake",
+        "path_type": "hardlink",
+        "sha256": "1a77e9a9ed3728e0cde26fb4b9bdf946f5a37196875d1a5e347258be00efdd95",
+        "size_in_bytes": 901,
+        "sha256_in_prefix": "1a77e9a9ed3728e0cde26fb4b9bdf946f5a37196875d1a5e347258be00efdd95"
+      },
+      {
+        "_path": "Library/lib/cmake/mpfr/libmpfr.cmake",
+        "path_type": "hardlink",
+        "sha256": "5538b984639b23a8e6f23659ef2cc08869a7b84e6d1eb33dc4ea631745706505",
+        "size_in_bytes": 3521,
+        "sha256_in_prefix": "5538b984639b23a8e6f23659ef2cc08869a7b84e6d1eb33dc4ea631745706505"
+      },
+      {
+        "_path": "Library/lib/libmpfr-6.lib",
+        "path_type": "hardlink",
+        "sha256": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a",
+        "size_in_bytes": 85856,
+        "sha256_in_prefix": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a"
+      },
+      {
+        "_path": "Library/lib/libmpfr.dll.a",
+        "path_type": "hardlink",
+        "sha256": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a",
+        "size_in_bytes": 85856,
+        "sha256_in_prefix": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a"
+      },
+      {
+        "_path": "Library/lib/libmpfr.lib",
+        "path_type": "hardlink",
+        "sha256": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a",
+        "size_in_bytes": 85856,
+        "sha256_in_prefix": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a"
+      },
+      {
+        "_path": "Library/lib/mpfr.lib",
+        "path_type": "hardlink",
+        "sha256": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a",
+        "size_in_bytes": 85856,
+        "sha256_in_prefix": "e741c29fc6a5d527ee27a38d2590cb11d054327a14fde3ba57b1f5f4d1fa862a"
+      },
+      {
+        "_path": "Library/lib/pkgconfig/mpfr.pc",
+        "prefix_placeholder": "C:\\b\\abs_05g455otbb\\croot\\mpfr_1738077327824\\_h_env",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "9b7cd885d74393f530a85eb1b9c59ea073824b1e824adc046076d8107dd13a83",
+        "size_in_bytes": 446,
+        "sha256_in_prefix": "06c11dced07fdda64479fd8be83ebaf0e599314c20c7335fd5646de1704bdfe0"
+      }
+    ]
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\mpfr-4.2.1-h56c3642_0",
+    "type": 1
+  }
+}

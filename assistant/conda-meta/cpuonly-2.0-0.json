@@ -1,0 +1,37 @@
+{
+  "name": "cpuonly",
+  "version": "2.0",
+  "build": "0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/pytorch/noarch",
+  "subdir": "noarch",
+  "fn": "cpuonly-2.0-0.tar.bz2",
+  "md5": "1cf3a59ef90a4078c253e3b02c272065",
+  "url": "https://conda.anaconda.org/pytorch/noarch/cpuonly-2.0-0.tar.bz2",
+  "sha256": "f9107aca2a9d23a032634644df5cdb8d0185337891593ce540adc480810ab539",
+  "depends": [
+    "pytorch-mutex 1.0 cpu"
+  ],
+  "constrains": [],
+  "track_features": "cpuonly",
+  "noarch": "generic",
+  "license": "",
+  "package_type": "noarch_generic",
+  "timestamp": 1630913615000,
+  "size": 2380,
+  "requested_spec": "cpuonly",
+  "package_tarball_full_path": "C:\\Users\\garvi\\.conda\\pkgs\\cpuonly-2.0-0.tar.bz2",
+  "extracted_package_dir": "C:\\Users\\garvi\\.conda\\pkgs\\cpuonly-2.0-0",
+  "files": [],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": []
+  },
+  "link": {
+    "source": "C:\\Users\\garvi\\.conda\\pkgs\\cpuonly-2.0-0",
+    "type": 1
+  },
+  "requested_specs": [
+    "cpuonly"
+  ]
+}
