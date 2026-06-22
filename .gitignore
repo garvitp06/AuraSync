@@ -1,0 +1,52 @@
+# =====================================================================
+# FORCE EXPLICIT ROUTING
+# =====================================================================
+!src/
+!assistant/
+!assistant/backend/
+
+# =====================================================================
+# CACHES & IDEs
+# =====================================================================
+__pycache__/
+*.pyc
+.idea/
+.pytest_cache/
+
+
+# =====================================================================
+# VIRTUAL ENVIRONMENT BLOCK (Inside 'assistant/')
+# =====================================================================
+assistant/conda-meta/
+assistant/DLLs/
+assistant/etc/
+assistant/fonts/
+assistant/include/
+assistant/Lib/
+assistant/Library/
+assistant/libs/
+assistant/Scripts/
+assistant/share/
+assistant/Tools/
+assistant/*.exe
+assistant/*.dll
+assistant/api-ms-win-core-*.dll
+
+# =====================================================================
+# HEAVY DATASETS & MODEL BINARIES
+# =====================================================================
+vosk-model/
+data/
+assistant/data/
+.asteroid/
+*.wav
+*.mp3
+
+# =====================================================================
+# ALLOW SOURCE CODE ONLY
+# =====================================================================
+!src/*.py
+!src/README.md
+!assistant/backend/*.py
+!requirements.txt
+!setup.txt
