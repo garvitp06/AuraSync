@@ -5,7 +5,7 @@
 - **Team name** - *Gagnantes*
 - **Team members (Names)** - *Garvit Pareek*, *Alishri Poddar*
 - **Institute/College Name** - *SRM Institute of Science and Technology, Kattankulathur Campus, Potheri, SRM Nagar, Kattankulathur, Tamil Nadu 603203*
-- **Final Presentation Google Drive Link** - *[INSERT YOUR CHOSEN GOOGLE DRIVE PRESENTATION URL HERE]*
+- **Final Presentation Google Drive Link** - *https://docs.google.com/presentation/d/1Rn5UmLYtsuW57CL7FYACQWGOTVJg8TEQdl_FiV4vKhA/edit?usp=drivesdk*
 - **Full Submission Demo Video Link** - https://youtu.be/9dvVwN5cGgc
 - **Setup & Result Reproducibility Video Link** - https://youtu.be/j89BNlZl2rM
 
